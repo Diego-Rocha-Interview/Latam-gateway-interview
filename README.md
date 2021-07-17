@@ -1,9 +1,9 @@
 # README
 
-##Sistema de consulta de CEPs, desenvolvido para o processo seletivo, referente à vaga "Programador Pleno Ruby" na LatamGateway
+## Sistema de consulta de CEPs, desenvolvido para o processo seletivo, referente à vaga "Programador Pleno Ruby" na LatamGateway
 
 
-###Ver antes de prosseguir
+### Ver antes de prosseguir
 -[Assista](https://youtu.be/AemtJnUC11M)
 -[Infraestrutura proposta](https://drive.google.com/file/d/1jmcoem6DOxaHYC3gMcAIGIZWpj1E5GiM/view?usp=sharing)
 
