@@ -1,0 +1,1186 @@
+  [1m[35m (26.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (338.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (266.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAddresses (20210715030303)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715030303"]]
+  [1m[36mTRANSACTION (159.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-15 03:10:19.476350"], ["updated_at", "2021-07-15 03:10:19.476350"]]
+  [1m[36mTRANSACTION (123.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/Latamgateway" for ::1 at 2021-07-15 00:25:52 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/Latamgateway"):
+  
+Started GET "/favicon.ico" for ::1 at 2021-07-15 00:25:53 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/latamgateway" for ::1 at 2021-07-15 00:26:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/latamgateway"):
+  
+Started GET "/latamgateway" for ::1 at 2021-07-15 00:26:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/latamgateway"):
+  
+Started GET "/" for ::1 at 2021-07-15 00:26:52 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/tools/ruby30/lib/ruby/gems/3.0.0/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/tools/ruby30/lib/ruby/gems/3.0.0/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 48.1ms | Allocations: 214)
+Completed 200 OK in 148ms (Views: 50.8ms | ActiveRecord: 0.0ms | Allocations: 2697)
+
+
+Started GET "/latamgateway" for ::1 at 2021-07-15 00:30:21 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/latamgateway"):
+  
+Started GET "/Latamgateway" for ::1 at 2021-07-15 00:30:30 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Latamgateway"):
+  
+Started GET "/Latamgateway" for ::1 at 2021-07-15 00:31:57 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/Latamgateway"):
+  
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAddress Create (18.8ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cep", "12226620"], ["created_at", "2021-07-15 03:34:15.535492"], ["updated_at", "2021-07-15 03:34:15.535492"]]
+  [1m[36mTRANSACTION (171.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/Latamgateway" for ::1 at 2021-07-15 00:34:37 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/Latamgateway"):
+  
+Started GET "/Latamgateway" for ::1 at 2021-07-15 00:34:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Latamgateway"):
+  
+Started GET "/Latamgateway/addresses" for ::1 at 2021-07-15 00:35:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Latamgateway/addresses"):
+  
+Started GET "/Latamgateway/address" for ::1 at 2021-07-15 00:35:09 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Latamgateway/address"):
+  
+Started GET "/rails/info/routes?path=e" for ::1 at 2021-07-15 00:35:18 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"e"}
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 3309)
+
+
+Started GET "/rails/info/routes?path=1" for ::1 at 2021-07-15 00:35:29 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"1"}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 673)
+
+
+Started GET "/rails/info/routes?path=1" for ::1 at 2021-07-15 00:35:30 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"1"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 671)
+
+
+Started GET "/rails/info/routes?path=122" for ::1 at 2021-07-15 00:35:35 -0300
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"122"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 674)
+
+
+Started GET "/Latamgateway" for ::1 at 2021-07-15 00:38:29 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Latamgateway"):
+  
+Started GET "/Latamgateway/addresses/id" for ::1 at 2021-07-15 00:39:38 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Latamgateway/addresses/id"):
+  
+Started GET "/Latamgateway/addresses/cep" for ::1 at 2021-07-15 00:39:48 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/Latamgateway/addresses/cep"):
+  
+Started GET "/latamgateway" for ::1 at 2021-07-15 01:11:24 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/latamgateway"):
+  
+Started GET "/latamgateway" for ::1 at 2021-07-15 01:36:56 -0300
+  [1m[35m (94.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/latamgateway" for ::1 at 2021-07-15 01:37:00 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/latamgateway"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/latamgateway"):
+  
+Started GET "/favicon.ico" for ::1 at 2021-07-15 01:37:11 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2021-07-15 01:39:06 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/tools/ruby30/lib/ruby/gems/3.0.0/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/tools/ruby30/lib/ruby/gems/3.0.0/gems/railties-6.1.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 262.2ms | Allocations: 215)
+Completed 200 OK in 520ms (Views: 264.8ms | ActiveRecord: 0.0ms | Allocations: 2222)
+
+
+Started GET "/latamgateway" for ::1 at 2021-07-15 01:40:39 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/latamgateway"):
+  
+Started GET "/latamgateway" for ::1 at 2021-07-15 01:42:24 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/latamgateway"):
+  
+Started GET "/latamgateway" for ::1 at 2021-07-15 01:48:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/latamgateway"):
+  
+Started GET "/latamgateway" for ::1 at 2021-07-15 01:48:31 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/latamgateway"):
+  
+Started GET "/addresses" for ::1 at 2021-07-15 01:52:19 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AddressesController#index as HTML
+  [1m[36mAddress Load (0.6ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 166ms (Views: 138.8ms | ActiveRecord: 2.2ms | Allocations: 6734)
+
+
+Started GET "/addresses" for ::1 at 2021-07-15 01:54:33 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AddressesController#index as HTML
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 8.1ms | ActiveRecord: 1.4ms | Allocations: 6661)
+
+
+Started GET "/addresses" for ::1 at 2021-07-15 01:54:35 -0300
+Processing by AddressesController#index as HTML
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 789)
+
+
+Started GET "/addresses" for ::1 at 2021-07-15 01:54:36 -0300
+Processing by AddressesController#index as HTML
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 765)
+
+
+Started GET "/addresses" for ::1 at 2021-07-15 01:54:37 -0300
+Processing by AddressesController#index as HTML
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 765)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAddress Destroy (662.7ms)[0m  [1m[31mDELETE FROM "addresses"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAddress Destroy (111.5ms)[0m  [1m[31mDELETE FROM "addresses"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAddress Create (18.1ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cep", "BAA 0"], ["created_at", "2021-07-15 05:10:16.444205"], ["updated_at", "2021-07-15 05:10:16.444205"]]
+  [1m[36mTRANSACTION (106.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAddress Create (2.4ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cep", "BAA 1"], ["created_at", "2021-07-15 05:10:16.587159"], ["updated_at", "2021-07-15 05:10:16.587159"]]
+  [1m[36mTRANSACTION (200.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAddress Create (2.7ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cep", "BAA 2"], ["created_at", "2021-07-15 05:10:16.798722"], ["updated_at", "2021-07-15 05:10:16.798722"]]
+  [1m[36mTRANSACTION (111.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAddress Create (2.3ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cep", "BAA 3"], ["created_at", "2021-07-15 05:10:16.920709"], ["updated_at", "2021-07-15 05:10:16.920709"]]
+  [1m[36mTRANSACTION (111.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAddress Create (2.6ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cep", "BAA 4"], ["created_at", "2021-07-15 05:10:17.043174"], ["updated_at", "2021-07-15 05:10:17.043174"]]
+  [1m[36mTRANSACTION (122.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/addresses" for ::1 at 2021-07-15 02:10:45 -0300
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AddressesController#index as HTML
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 9.4ms | ActiveRecord: 1.3ms | Allocations: 7264)
+
+
+Started GET "/addresses" for ::1 at 2021-07-15 02:20:45 -0300
+Processing by AddressesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 1.1ms | Allocations: 1897)
+
+
+Started GET "/addresses" for ::1 at 2021-07-15 02:31:43 -0300
+Processing by AddressesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.9ms | Allocations: 1844)
+
+
+Started POST "/addresses/3" for ::1 at 2021-07-15 02:32:57 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/addresses/3"):
+  
+Started GET "/addresses/3" for ::1 at 2021-07-15 02:33:02 -0300
+Processing by AddressesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mAddress Load (19.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:44:in `set_address'
+Completed 200 OK in 118ms (Views: 1.9ms | ActiveRecord: 19.3ms | Allocations: 2635)
+
+
+Started POST "/addresses" for ::1 at 2021-07-15 02:41:28 -0300
+Processing by AddressesController#create as */*
+  Parameters: {"cep"=>"12223", "address"=>{"cep"=>"12223"}}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/addresses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/addresses_controller.rb:20:in `create'
+  [1m[36mAddress Create (2.6ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cep", "12223"], ["created_at", "2021-07-15 05:41:28.713399"], ["updated_at", "2021-07-15 05:41:28.713399"]]
+  ↳ app/controllers/addresses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (96.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/addresses_controller.rb:20:in `create'
+Completed 201 Created in 134ms (Views: 2.9ms | ActiveRecord: 100.1ms | Allocations: 3151)
+
+
+Started GET "/addresses" for ::1 at 2021-07-15 02:41:34 -0300
+Processing by AddressesController#index as */*
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms | Allocations: 1406)
+
+
+Started POST "/addresses" for ::1 at 2021-07-15 02:45:54 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AddressesController#create as */*
+  Parameters: {"cep"=>"12225", "rua"=>"joao", "address"=>{"cep"=>"12225"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/addresses_controller.rb:20:in `create'
+  [1m[36mAddress Create (1.2ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cep", "12225"], ["created_at", "2021-07-15 05:45:55.125327"], ["updated_at", "2021-07-15 05:45:55.125327"]]
+  ↳ app/controllers/addresses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (154.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/addresses_controller.rb:20:in `create'
+Completed 201 Created in 226ms (Views: 2.9ms | ActiveRecord: 156.5ms | Allocations: 4011)
+
+
+Started GET "/addresses" for ::1 at 2021-07-15 02:46:04 -0300
+Processing by AddressesController#index as */*
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 1655)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/addresses" for ::1 at 2021-07-15 02:47:15 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AddressesController#create as */*
+  Parameters: {"cep"=>"122425", "rua"=>"joaco", "address"=>{"cep"=>"122425"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/addresses_controller.rb:20:in `create'
+  [1m[36mAddress Create (1.3ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cep", "122425"], ["created_at", "2021-07-15 05:47:16.053714"], ["updated_at", "2021-07-15 05:47:16.053714"]]
+  ↳ app/controllers/addresses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (192.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/addresses_controller.rb:20:in `create'
+Completed 201 Created in 253ms (Views: 3.0ms | ActiveRecord: 194.6ms | Allocations: 8330)
+
+
+Started GET "/addresses" for ::1 at 2021-07-15 02:47:25 -0300
+Processing by AddressesController#index as */*
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 1972)
+
+
+Started GET "/addresses" for ::1 at 2021-07-15 03:18:29 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AddressesController#index as */*
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/addresses_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.94ms)
+Completed 200 OK in 88ms (Views: 80.2ms | ActiveRecord: 1.4ms | Allocations: 10395)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-15 03:28:58 -0300
+  
+NameError (undefined local variable or method `json' for #<ActionDispatch::Routing::Mapper:0x000002952198f220 @set=#<ActionDispatch::Routing::RouteSet:0x0000029520fccc10>, @draw_paths=[#<Pathname:C:/users/cliente/downloads/diego/latamgateway/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x000002952198f1a8 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x0000029521016630 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+Did you mean?  JSON):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/api/addresses" for ::1 at 2021-07-15 03:29:25 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/addresses"):
+  
+Started GET "/api/addresses" for ::1 at 2021-07-15 03:30:29 -0300
+  
+NameError (undefined local variable or method `api' for main:Object):
+  
+app/controllers/api/addresses_controller.rb:1:in `<main>'
+Started GET "/api/addresses" for ::1 at 2021-07-15 03:30:36 -0300
+  
+NameError (undefined local variable or method `api' for main:Object):
+  
+app/controllers/api/addresses_controller.rb:1:in `<main>'
+Started GET "/api/addresses" for ::1 at 2021-07-15 03:33:51 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (undefined local variable or method `api' for main:Object):
+  
+app/controllers/api/addresses_controller.rb:1:in `<main>'
+Started GET "/api/addresses" for ::1 at 2021-07-15 03:34:04 -0300
+  
+NameError (undefined local variable or method `api' for main:Object):
+  
+app/controllers/api/addresses_controller.rb:1:in `<main>'
+Started GET "/api/addresses" for ::1 at 2021-07-15 03:35:58 -0300
+Processing by Api::AddressesController#index as JSON
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/addresses_controller.rb:8:in `index'
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/api/addresses_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.32ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.7ms | Allocations: 8092)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-15 04:26:49 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::AddressesController#index as JSON
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 1978)
+
+
+  
+NoMethodError (undefined method `real_token' for #<Api::AddressesController:0x00000000005fa0>
+Did you mean?  real_token?):
+  
+activesupport (6.1.4) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:105:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/api/addresses" for ::1 at 2021-07-15 04:27:05 -0300
+Processing by Api::AddressesController#index as JSON
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1815)
+
+
+  
+NoMethodError (undefined method `real_token' for #<Api::AddressesController:0x00000000006130>
+Did you mean?  real_token?):
+  
+activesupport (6.1.4) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:105:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/api/addresses" for ::1 at 2021-07-15 04:29:25 -0300
+Processing by Api::AddressesController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authToken_authencaticator rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 6.4ms | Allocations: 1078)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-15 04:30:26 -0300
+Processing by Api::AddressesController#index as JSON
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/addresses_controller.rb:11:in `index'
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/controllers/api/addresses_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.29ms)
+Completed 200 OK in 61ms (Views: 19.8ms | ActiveRecord: 2.1ms | Allocations: 11008)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAddress Destroy (199.5ms)[0m  [1m[31mDELETE FROM "addresses"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddStateToAddress (20210715080032)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (48.8ms)[0m  [1m[35mALTER TABLE "addresses" ADD "state" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080032"]]
+  [1m[36mTRANSACTION (144.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddCityToAddress (20210715080100)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "city" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080100"]]
+  [1m[36mTRANSACTION (138.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDistrictToAddress (20210715080153)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "addresses" ADD "district" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080153"]]
+  [1m[36mTRANSACTION (146.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddStreetToAddress (20210715080425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080425"]]
+  [1m[36mTRANSACTION (138.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddEmailToAddress (20210715080510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailToAddress (20210715080510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailToAddress (20210715080510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailToAddress (20210715080510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailToAddress (20210715080510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailToAddress (20210715080510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailToAddress (20210715080510)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailToAddress (20210715080510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddStreetToAddress (20210715080425)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaddresses" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "state" varchar DEFAULT NULL, "city" varchar DEFAULT NULL, "district" varchar DEFAULT NULL, "street" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aaddresses" ("id","cep","created_at","updated_at","state","city","district","street")
+                     SELECT "id","cep","created_at","updated_at","state","city","district","street" FROM "addresses"[0m
+  [1m[35m (23.7ms)[0m  [1m[35mDROP TABLE "addresses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "state" varchar DEFAULT NULL, "city" varchar DEFAULT NULL, "district" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "addresses" ("id","cep","created_at","updated_at","state","city","district")
+                     SELECT "id","cep","created_at","updated_at","state","city","district" FROM "aaddresses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aaddresses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210715080425"]]
+  [1m[36mTRANSACTION (251.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDistrictToAddress (20210715080153)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaddresses" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "state" varchar DEFAULT NULL, "city" varchar DEFAULT NULL, "district" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aaddresses" ("id","cep","created_at","updated_at","state","city","district")
+                     SELECT "id","cep","created_at","updated_at","state","city","district" FROM "addresses"[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "addresses"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "state" varchar DEFAULT NULL, "city" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "addresses" ("id","cep","created_at","updated_at","state","city")
+                     SELECT "id","cep","created_at","updated_at","state","city" FROM "aaddresses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aaddresses"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210715080153"]]
+  [1m[36mTRANSACTION (137.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddCityToAddress (20210715080100)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaddresses" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "state" varchar DEFAULT NULL, "city" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aaddresses" ("id","cep","created_at","updated_at","state","city")
+                     SELECT "id","cep","created_at","updated_at","state","city" FROM "addresses"[0m
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "addresses"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "state" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "addresses" ("id","cep","created_at","updated_at","state")
+                     SELECT "id","cep","created_at","updated_at","state" FROM "aaddresses"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "aaddresses"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210715080100"]]
+  [1m[36mTRANSACTION (170.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddStateToAddress (20210715080032)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaddresses" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "state" varchar DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aaddresses" ("id","cep","created_at","updated_at","state")
+                     SELECT "id","cep","created_at","updated_at","state" FROM "addresses"[0m
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE "addresses"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "addresses" ("id","cep","created_at","updated_at")
+                     SELECT "id","cep","created_at","updated_at" FROM "aaddresses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aaddresses"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210715080032"]]
+  [1m[36mTRANSACTION (191.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAddresses (20210715030303)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.7ms)[0m  [1m[35mDROP TABLE "addresses"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210715030303"]]
+  [1m[36mTRANSACTION (142.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAddresses (20210715030303)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715030303"]]
+  [1m[36mTRANSACTION (141.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddStateToAddress (20210715080032)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "addresses" ADD "state" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080032"]]
+  [1m[36mTRANSACTION (112.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddCityToAddress (20210715080100)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "city" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080100"]]
+  [1m[36mTRANSACTION (126.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDistrictToAddress (20210715080153)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "district" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080153"]]
+  [1m[36mTRANSACTION (124.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddStreetToAddress (20210715080425)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080425"]]
+  [1m[36mTRANSACTION (145.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddEmailToAddress (20210715080510)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "addresses" ADD "street" varchar[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToAddress (20210715080637)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "addresses" ADD "email" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080637"]]
+  [1m[36mTRANSACTION (126.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPassToAddress (20210715080659)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (40.1ms)[0m  [1m[35mALTER TABLE "addresses" ADD "password" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080659"]]
+  [1m[36mTRANSACTION (186.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddTokenToAddress (20210715080741)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (11.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (11.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aaddresses" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "state" varchar DEFAULT NULL, "city" varchar DEFAULT NULL, "district" varchar DEFAULT NULL, "street" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "password" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aaddresses" ("id","cep","created_at","updated_at","state","city","district","street","email","password")
+                     SELECT "id","cep","created_at","updated_at","state","city","district","street","email","password" FROM "addresses"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "addresses"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer NOT NULL PRIMARY KEY, "cep" varchar NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "state" varchar DEFAULT NULL, "city" varchar DEFAULT NULL, "district" varchar DEFAULT NULL, "street" varchar DEFAULT NULL, "email" varchar DEFAULT NULL, "password" varchar DEFAULT NULL, "token" varchar NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "addresses" ("id","cep","created_at","updated_at","state","city","district","street","email","password")
+                     SELECT "id","cep","created_at","updated_at","state","city","district","street","email","password" FROM "aaddresses"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aaddresses"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_addresses_on_token" ON "addresses" ("token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210715080741"]]
+  [1m[36mTRANSACTION (147.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/api/addresses" for ::1 at 2021-07-15 06:13:42 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected =>
+ scopes :by_token, =>(token) {where(token:token)}
+                   ^~
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+ scopes :by_token, =>(token) {where(token:token)}
+                             ^
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+... =>(token) {where(token:token)}
+...                              ^
+):
+  
+app/models/address.rb:3: syntax error, unexpected =>
+app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+app/models/address.rb:3: syntax error, unexpected =>
+app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+Started POST "/api/addresses" for ::1 at 2021-07-15 06:14:32 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected =>
+ 	scopes :by_token, =>(token) {where(token:token)}
+ 	                  ^~
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+ 	scopes :by_token, =>(token) {where(token:token)}
+ 	                            ^
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+... =>(token) {where(token:token)}
+...                              ^
+):
+  
+app/models/address.rb:3: syntax error, unexpected =>
+app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+app/models/address.rb:3: syntax error, unexpected =>
+app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+Started GET "/api/addresses" for ::1 at 2021-07-15 06:16:58 -0300
+Processing by Api::AddressesController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authToken_authencaticator rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.5ms | Allocations: 1017)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 06:17:20 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected =>
+ 	scopes :by_token, =>(token) {where(token:token)}
+ 	                  ^~
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+ 	scopes :by_token, =>(token) {where(token:token)}
+ 	                            ^
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+... =>(token) {where(token:token)}
+...                              ^
+):
+  
+app/models/address.rb:3: syntax error, unexpected =>
+app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+app/models/address.rb:3: syntax error, unexpected =>
+app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+Started POST "/api/addresses" for ::1 at 2021-07-15 06:18:32 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected =>
+ 	scope :by_token, =>(token) {where(token:token)}
+ 	                 ^~
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+ 	scope :by_token, =>(token) {where(token:token)}
+ 	                           ^
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+... =>(token) {where(token:token)}
+...                              ^
+):
+  
+app/models/address.rb:3: syntax error, unexpected =>
+app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+app/models/address.rb:3: syntax error, unexpected =>
+app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+app/models/address.rb:3: syntax error, unexpected '}', expecting `end'
+Started POST "/api/addresses" for ::1 at 2021-07-15 06:19:51 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected =>
+ 	scope :by_token, =>(token) { where (token: token...
+ 	                 ^~
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+ 	scope :by_token, =>(token) { where (token: token) }
+ 	                           ^
+):
+  
+app/models/address.rb:3: syntax error, unexpected =>
+app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+app/models/address.rb:3: syntax error, unexpected =>
+app/models/address.rb:3: syntax error, unexpected '{', expecting `end'
+Started POST "/api/addresses" for ::1 at 2021-07-15 06:21:17 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:3: syntax error, unexpected label, expecting ')'
+...oken, ->(token) { where (token: token) }
+...                         ^~~~~~
+):
+  
+app/models/address.rb:3: syntax error, unexpected label, expecting ')'
+app/models/address.rb:3: syntax error, unexpected label, expecting ')'
+Started POST "/api/addresses" for ::1 at 2021-07-15 06:24:26 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::AddressesController#create as JSON
+  Parameters: {"cep"=>"12223", "address"=>{"cep"=>"12223"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mAddress Create (1.2ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at", "token") VALUES (?, ?, ?, ?)[0m  [["cep", "12223"], ["created_at", "2021-07-15 09:24:26.280786"], ["updated_at", "2021-07-15 09:24:26.280786"], ["token", "1234567899"]]
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (166.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+[active_model_serializers] Rendered AddressSerializer with ActiveModelSerializers::Adapter::Attributes (1.22ms)
+Completed 201 Created in 215ms (Views: 22.8ms | ActiveRecord: 169.1ms | Allocations: 11961)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 06:24:53 -0300
+Processing by Api::AddressesController#create as JSON
+  Parameters: {"cep"=>"12333333", "address"=>{"cep"=>"12333333"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mAddress Create (2.4ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at", "token") VALUES (?, ?, ?, ?)[0m  [["cep", "12333333"], ["created_at", "2021-07-15 09:24:53.277591"], ["updated_at", "2021-07-15 09:24:53.277591"], ["token", "1234567898"]]
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (115.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+[active_model_serializers] Rendered AddressSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 201 Created in 129ms (Views: 2.0ms | ActiveRecord: 118.0ms | Allocations: 2207)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-15 06:25:03 -0300
+Processing by Api::AddressesController#index as JSON
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."token" = ?[0m  [["token", "1234567898"]]
+  ↳ app/controllers/api/addresses_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.4ms | Allocations: 2914)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-15 06:25:12 -0300
+Processing by Api::AddressesController#index as JSON
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."token" = ?[0m  [["token", "1234567899"]]
+  ↳ app/controllers/api/addresses_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1069)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-15 07:12:28 -0300
+Processing by Api::AddressesController#index as JSON
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/address.rb:4:in `block in <class:Address>'
+  [1m[36mAddress Load (0.4ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses" WHERE "addresses"."token" = ?[0m  [["token", "1234567899"]]
+  ↳ app/controllers/api/addresses_controller.rb:11:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 22ms (Views: 15.3ms | ActiveRecord: 0.9ms | Allocations: 7655)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:27:29 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:30:39 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:30:43 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:30:44 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:30:44 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:30:45 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:32:06 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:36:16 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:38:22 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/addresses" for ::1 at 2021-07-15 07:38:40 -0300
+Processing by Api::AddressesController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authToken_authencaticator rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 2.1ms | Allocations: 1017)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-15 07:38:42 -0300
+Processing by Api::AddressesController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authToken_authencaticator rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.8ms | Allocations: 228)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-15 07:38:45 -0300
+Processing by Api::AddressesController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authToken_authencaticator rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.8ms | Allocations: 183)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-15 07:38:46 -0300
+Processing by Api::AddressesController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authToken_authencaticator rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.7ms | Allocations: 183)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-15 07:38:46 -0300
+Processing by Api::AddressesController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Filter chain halted as :authToken_authencaticator rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.8ms | Allocations: 183)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:39:38 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:39:40 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:18: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:40:31 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::AddressesController#create as JSON
+  Parameters: {"cep"=>"12226620", "address"=>{"cep"=>"12226620"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mAddress Create (1.1ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at", "token") VALUES (?, ?, ?, ?)[0m  [["cep", "12226620"], ["created_at", "2021-07-15 10:40:31.984121"], ["updated_at", "2021-07-15 10:40:31.984121"], ["token", "12345678999"]]
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (141.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+[active_model_serializers] Rendered AddressSerializer with ActiveModelSerializers::Adapter::Attributes (1.18ms)
+Completed 201 Created in 181ms (Views: 16.9ms | ActiveRecord: 144.6ms | Allocations: 11996)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:42:18 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::AddressesController#create as JSON
+  Parameters: {"cep"=>"12226620", "address"=>{"cep"=>"12226620"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mAddress Create (1.5ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at", "token") VALUES (?, ?, ?, ?)[0m  [["cep", "12226620"], ["created_at", "2021-07-15 10:42:19.115761"], ["updated_at", "2021-07-15 10:42:19.115761"], ["token", "12345678999"]]
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (138.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+[active_model_serializers] Rendered AddressSerializer with ActiveModelSerializers::Adapter::Attributes (1.25ms)
+Completed 201 Created in 177ms (Views: 5.5ms | ActiveRecord: 143.7ms | Allocations: 7223)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:47:15 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::AddressesController#create as JSON
+  Parameters: {"cep"=>"12226620", "address"=>{"cep"=>"12226620"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mAddress Create (1.1ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at", "token") VALUES (?, ?, ?, ?)[0m  [["cep", "12226620"], ["created_at", "2021-07-15 10:47:15.827168"], ["updated_at", "2021-07-15 10:47:15.827168"], ["token", "12345678999"]]
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (145.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+[active_model_serializers] Rendered AddressSerializer with ActiveModelSerializers::Adapter::Attributes (0.99ms)
+Completed 201 Created in 168ms (Views: 4.7ms | ActiveRecord: 148.2ms | Allocations: 7215)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:47:24 -0300
+Processing by Api::AddressesController#create as JSON
+  Parameters: {"cep"=>"12226620", "address"=>{"cep"=>"12226620"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mAddress Create (9.3ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at", "token") VALUES (?, ?, ?, ?)[0m  [["cep", "12226620"], ["created_at", "2021-07-15 10:47:24.283340"], ["updated_at", "2021-07-15 10:47:24.283340"], ["token", "123456789998"]]
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (147.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+[active_model_serializers] Rendered AddressSerializer with ActiveModelSerializers::Adapter::Attributes (1.25ms)
+Completed 201 Created in 171ms (Views: 3.1ms | ActiveRecord: 156.9ms | Allocations: 2244)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:47:55 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::AddressesController#create as JSON
+  Parameters: {"cep"=>"12226620", "address"=>{"cep"=>"12226620"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mAddress Create (1.2ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at", "token") VALUES (?, ?, ?, ?)[0m  [["cep", "12226620"], ["created_at", "2021-07-15 10:47:55.901106"], ["updated_at", "2021-07-15 10:47:55.901106"], ["token", "123456789998"]]
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (117.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+[active_model_serializers] Rendered AddressSerializer with ActiveModelSerializers::Adapter::Attributes (1.36ms)
+Completed 201 Created in 151ms (Views: 5.6ms | ActiveRecord: 121.3ms | Allocations: 7242)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:48:31 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:5: syntax error, unexpected symbol literal
+ 	def	:get_information_address(cep)
+ 	   	^
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:20: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:5: syntax error, unexpected symbol literal
+app/models/address.rb:20: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:5: syntax error, unexpected symbol literal
+app/models/address.rb:20: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:49:06 -0300
+  
+SyntaxError (C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:5: syntax error, unexpected symbol literal
+ 	def	:get_information_address(cep)
+ 	   	^
+C:/users/cliente/downloads/diego/Latamgateway/app/models/address.rb:20: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/address.rb:5: syntax error, unexpected symbol literal
+app/models/address.rb:20: syntax error, unexpected `end', expecting end-of-input
+app/models/address.rb:5: syntax error, unexpected symbol literal
+app/models/address.rb:20: syntax error, unexpected `end', expecting end-of-input
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:50:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::AddressesController#create as JSON
+  Parameters: {"cep"=>"12226620", "address"=>{"cep"=>"12226620"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mAddress Create (1.1ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at", "token") VALUES (?, ?, ?, ?)[0m  [["cep", "12226620"], ["created_at", "2021-07-15 10:50:55.207255"], ["updated_at", "2021-07-15 10:50:55.207255"], ["token", "123456789998"]]
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (118.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+[active_model_serializers] Rendered AddressSerializer with ActiveModelSerializers::Adapter::Attributes (0.96ms)
+Completed 201 Created in 141ms (Views: 5.0ms | ActiveRecord: 121.1ms | Allocations: 7212)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:51:58 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::AddressesController#create as JSON
+  Parameters: {"cep"=>"12226620", "address"=>{"cep"=>"12226620"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mAddress Create (1.2ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at", "token") VALUES (?, ?, ?, ?)[0m  [["cep", "12226620"], ["created_at", "2021-07-15 10:51:58.726633"], ["updated_at", "2021-07-15 10:51:58.726633"], ["token", "123456789998"]]
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (125.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+[active_model_serializers] Rendered AddressSerializer with ActiveModelSerializers::Adapter::Attributes (0.99ms)
+Completed 201 Created in 151ms (Views: 5.3ms | ActiveRecord: 128.2ms | Allocations: 7266)
+
+
+Started POST "/api/addresses" for ::1 at 2021-07-15 07:52:03 -0300
+Processing by Api::AddressesController#create as JSON
+  Parameters: {"cep"=>"12226620", "address"=>{"cep"=>"12226620"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mAddress Create (2.6ms)[0m  [1m[32mINSERT INTO "addresses" ("cep", "created_at", "updated_at", "token") VALUES (?, ?, ?, ?)[0m  [["cep", "12226620"], ["created_at", "2021-07-15 10:52:03.170781"], ["updated_at", "2021-07-15 10:52:03.170781"], ["token", "123456789998"]]
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (136.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/addresses_controller.rb:23:in `create'
+[active_model_serializers] Rendered AddressSerializer with ActiveModelSerializers::Adapter::Attributes (0.63ms)
+Completed 201 Created in 151ms (Views: 2.8ms | ActiveRecord: 139.3ms | Allocations: 2225)
+
+
+Started GET "/addresses" for ::1 at 2021-07-17 02:35:48 -0300
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/addresses"):
+  
+Started GET "/favicon.ico" for ::1 at 2021-07-17 02:35:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/api/addresses" for ::1 at 2021-07-17 02:36:11 -0300
+Processing by Api::AddressesController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Filter chain halted as :authToken_authencaticator rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 1141)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-17 03:18:42 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::AddressesController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Filter chain halted as :authToken_authencaticator rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1075)
+
+
+Started GET "/api/addresses" for ::1 at 2021-07-17 03:18:43 -0300
+Processing by Api::AddressesController#index as JSON
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Filter chain halted as :authToken_authencaticator rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 234)
+
+
