@@ -2,7 +2,7 @@ class Rack::Attack
  
  Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new
  
- # Allow all local traffic
+ # permite que seja realizada requests locais ilimitadas
  
  safelist('allow-localhost') do |req|
  
@@ -10,24 +10,11 @@ class Rack::Attack
  
  end
  
- # Allow an IP address to make 10 requests every 10 seconds
+ #Limita requests externas
  
  throttle('req/ip', limit: 5, period: 5) do |req|
  
    req.ip
  
  end
- 
- # Throttle login attempts by email address
- 
- #throttle("logins/email", limit: 5, period: 20.seconds) do |req|
- 
- #  if req.path == '/users/sign_in' && req.post?
- 
- #    req.params['email'].presence
- 
- #  end
- 
- #end
- 
 end
